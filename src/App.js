@@ -260,8 +260,8 @@ function App () {
             top: 0,
             width: '100%',
             zIndex: 10000,
-            padding: '10px 30px 10px 30px',
-            marginBottom: 30,
+            padding: '5px 30px 10px 30px',
+            marginBottom: 20,
             background: '#40c057',
             border: '1px solid #40c057',
             borderRadius: 8
@@ -285,7 +285,7 @@ function App () {
               flexDirection: 'column',
               alignItems: 'center',
               background: '#38a84b',
-              padding: '20px',
+              padding: '7px',
               borderRadius: 8
             }}
           >

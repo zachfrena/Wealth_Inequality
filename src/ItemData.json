@@ -4,167 +4,167 @@
         "description": "Assumes a family of 4", 
         "value": 250,
         "maximum": "Infinity",
-        "img_url":"/images/groceries.jpg"
+        "img_url":"images/groceries.JPG"
       },
     {
       "item": "Expensive steak dinner",
       "description": "Nice steakhouse, dinner for 2", 
       "value": 500,
       "maximum": "Infinity",
-      "img_url":"/images/steak.jpg"
+      "img_url":"images/steak.JPG"
     },
     {
         "item": "New wardrobe", 
         "description": "Toss the old rags, it's time to upgrade", 
         "value": 40000,
         "maximum": "Infinity",
-        "img_url":"/images/wardrobe.jpg"
+        "img_url":"images/wardrobe.JPG"
       },
       {
         "item": "4 bedroom house", 
         "description": "The dream-home for the average buyer", 
         "value": 650000,
         "maximum": "Infinity",
-        "img_url":"/images/4bedroom.jpg"
+        "img_url":"images/4bedroom.JPG"
       },
       {
         "item": "Mansion (Dayton, Ohio)", 
         "description": "A million bucks sure can get you far in Ohio", 
         "value": 1100000,
         "maximum": "Infinity",
-        "img_url":"/images/daytonmansion.jpg"
+        "img_url":"images/daytonmansion.JPG"
       },
       {
         "item": "Mansion (Bel Air, Los Angeles)", 
         "description": "A necessity for any self-respecting billionaire", 
         "value": 18600000,
         "maximum": "Infinity",
-        "img_url":"/images/belairmansion.jpg"
+        "img_url":"images/belairmansion.JPG"
       },
       {
         "item": "Penthouse (Manhattan)", 
         "description": "Let's hope the elevator isn't slow", 
         "value": 25000000,
         "maximum": "Infinity",
-        "img_url":"/images/manhattanpenthouse.jpg"
+        "img_url":"images/manhattanpenthouse.JPG"
       },
       {
         "item": "Salvator Mundi", 
         "description": "Highest price ever paid for a painting", 
         "value": 4754000000,
         "maximum": 1,
-        "img_url":"/images/salvatormundi.jpg"
+        "img_url":"images/salvatormundi.JPG"
       },
       {
         "item": "Build a new Hospital", 
         "description": "For when you die and your body gets frozen", 
         "value": 387000000,
         "maximum": "Infinity",
-        "img_url":"/images/newhospital.jpg"
+        "img_url":"images/newhospital.JPG"
       },
       {
         "item": "Bugatti La Voiture Noire", 
         "description": "Time is money, so you gotta go fast", 
         "value": 19000000,
         "maximum": "Infinity",
-        "img_url":"/images/bugatti.jpg"
+        "img_url":"images/bugatti.JPG"
       },
       {
         "item": "Formula 1 race car", 
         "description": "You drive this car when the Bugatti is too slow", 
         "value": 12000000,
         "maximum": "Infinity",
-        "img_url":"/images/f1car.jpg"
+        "img_url":"images/f1car.JPG"
       },
       {
         "item": "Start your own university", 
         "description": "Ivy league endowments consistently see 10-15% annual returns (e.g. Yale saw a $1.2 Billion increase in 2015)", 
         "value": 1400000000,
         "maximum": "Infinity",
-        "img_url":"/images/university.jpg"
+        "img_url":"images/university.JPG"
       },   
       {
         "item": "Average Yacht", 
         "description": "Only an 'average' hundred-millionaire could afford this", 
         "value": 38000000,
         "maximum": "Infinity",
-        "img_url":"/images/yacht.jpg"
+        "img_url":"images/yacht.JPG"
       },
       {
         "item": "The History Supreme Yacht", 
         "description": "The most expensive yacht ever made", 
         "value": 4800000000,
         "maximum": 1,
-        "img_url":"/images/superyacht.jpg"
+        "img_url":"images/superyacht.JPG"
       },
       {
         "item": "Front-row seats: the Super Bowl", 
         "description": "But you'll miss all the fun TV commercials!", 
         "value": 147000,
         "maximum": "100",
-        "img_url":"/images/superbowl.jpg"
+        "img_url":"images/superbowl.JPG"
       },
       {
         "item": "Mount Everest expedition", 
         "description": "Might be easier just to skydive onto the summit", 
         "value": 200000,
         "maximum": "Infinity",
-        "img_url":"/images/everest.jpg"
+        "img_url":"images/everest.JPG"
       },
       {
         "item": "Average NHL team", 
         "description": "Compared to other sports leagues, what a steal!", 
         "value": 653000000,
         "maximum": 32,
-        "img_url":"/images/nhl.jpg"
+        "img_url":"images/nhl.JPG"
       },
       {
         "item": "Average NFL team", 
         "description": "On the bright side, you would get free tickets", 
         "value": 3040000000,
         "maximum": 32,
-        "img_url":"/images/nfl.jpg"
+        "img_url":"images/nfl.JPG"
       },
       {
         "item": "Average NBA team", 
         "description": "Truly a slam-dunk investment", 
         "value": 2480000000,
         "maximum": 30,
-        "img_url":"/images/nba.jpg"
+        "img_url":"images/nba.JPG"
       },
       {
         "item": "Average MLB team", 
         "description": "Successful owners see profits of $100 million/year", 
         "value": 1910000000,
         "maximum": 30,
-        "img_url":"/images/mlb.jpg"
+        "img_url":"images/mlb.JPG"
       },
       {
         "item": "Average pro Soccer team", 
         "description": "Lionel Messi currently demands $125 million/year", 
         "value": 4760000000,
         "maximum": 200,
-        "img_url":"/images/soccer.jpg"
+        "img_url":"images/soccer.JPG"
       },
       {
         "item": "Eliminate malaria globally", 
         "description": "Over an 8 year period in 34 countries [4]", 
         "value": 8500000000,
         "maximum": 1,
-        "img_url":"/images/malaria.jpg"
+        "img_url":"images/malaria.JPG"
       },
       {
         "item": "Eliminate poverty in the USA", 
         "description": "i.e. 25% of USA's yearly defense budget [5]", 
         "value": 142000000000,
         "maximum": 1,
-        "img_url":"/images/poverty.jpg"
+        "img_url":"images/poverty.JPG"
       },
       {
         "item": "Private Jet", 
         "description": "Hopefully the price includes decent airline food", 
         "value": 30000000,
         "maximum": "Infinity",
-        "img_url":"/images/privatejet.jpg"
+        "img_url":"images/privatejet.JPG"
       }
     ]

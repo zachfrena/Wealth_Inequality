@@ -7,3 +7,56 @@
   text-align: center;
 }
 
+.totalBalance{
+  font-size: 35px;
+}
+
+.comparisons{
+  font-size: 20px;
+  color:greenyellow;
+}
+
+.spentBox{
+  width: 50%;
+}
+
+.spendStats{
+  line-height: 150%;
+}
+
+@media (max-width: 1400px) {
+  .totalBalance{
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .totalBalance{
+    color:blueviolet;
+  }
+  .comparisons{
+    font-size: 17px;
+    color:blueviolet;
+  }
+  .spentBox{
+    width: 80%;
+  }
+  .spendStats{
+    line-height: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .totalBalance{
+    color:blueviolet;
+  }
+  .comparisons{
+    font-size: 17px;
+    color:blueviolet;
+  }
+  .spentBox{
+    width: 100%;
+  }
+}
+

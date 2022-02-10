@@ -60,7 +60,7 @@ function Item (props) {
 
         <Group
           position='center'
-          style={{ marginBottom: 5, minHeight: 62 }}
+          style={{ marginBottom: 0, minHeight: 42 }}
         >
           <Text size='xl' weight={700}>{props.item}</Text>
         </Group>
@@ -83,7 +83,7 @@ function Item (props) {
             justifyContent: 'center'
           }}
         >
-          <Text size='lg' weight={500} style={{color: 'green', lineHeight: 2.5 }}>
+          <Text size='lg' weight={500} style={{color: 'green', lineHeight: 1.5 }}>
                 {formattedValue}
           </Text>
         </div>

@@ -12,7 +12,7 @@ function App () {
   const [originalTotal, setOriginalTotal] = useState(0)
   const url = 'https://forbes400.herokuapp.com/api/forbes400?limit=10'
   const [billionaires, setBillionaires] = useState(null)
-  const [image, setImage] = useState("images/mystery.JPG")
+  const [image, setImage] = useState('images/mystery.JPG')
   const [bio1, setBio1] = useState('')
   const [bio2, setBio2] = useState('')
   const [bio3, setBio3] = useState('')
@@ -184,7 +184,8 @@ function App () {
           <h1
             style={{
               fontSize: '36px',
-              width: '1000px',
+              width: '100%',
+              maxWidth: '1000px',
               margin: 'auto',
               paddingBottom: '5px',
               background: '#003152',
@@ -236,7 +237,8 @@ function App () {
           <h1
             style={{
               fontSize: '36px',
-              width: '1000px',
+              width: '100%',
+              maxWidth: '1000px',
               margin: 'auto',
               marginBottom: '20px',
               paddingBottom: '5px',
@@ -256,11 +258,9 @@ function App () {
             flexDirection: 'column',
             position: 'sticky',
             top: 0,
-            // left:0,
-            // right:0,
             width: '100%',
             zIndex: 10000,
-            padding: 30,
+            padding: '10px 30px 10px 30px',
             marginBottom: 30,
             background: '#40c057',
             border: '1px solid #40c057',
@@ -268,9 +268,9 @@ function App () {
           }}
         >
           <Text
+            className='totalBalance'
             weight={700}
             style={{
-              fontSize: '40px',
               padding: '0px 5px 0px 5px',
               background: '#dff7e3',
               borderRadius: 10
@@ -279,6 +279,7 @@ function App () {
             Total Balance: {formattedTotal}
           </Text>
           <div
+            className='spentBox'
             style={{
               display: 'flex',
               flexDirection: 'column',
@@ -289,6 +290,7 @@ function App () {
             }}
           >
             <Text
+              className='totalDollarsSpent'
               weight={700}
               style={{
                 fontSize: '18px',
@@ -299,74 +301,77 @@ function App () {
             >
               Total Dollars Spent: {formattedTotalSpent}
             </Text>
-            <Text
-              weight={500}
-              style={{
-                fontSize: '18px'
-              }}
-            >
+            <Text weight={500} style={{}}>
               <div>
-                <div style={{ fontSize: '20px', fontWeight: 'bolder', padding:'15px 0px 5px 0px'}}>
+                <div
+                  className='comparisons'
+                  style={{
+                    fontWeight: 'bolder',
+                    padding: '0px 0px 5px 0px'
+                  }}
+                >
                   Or in other words... the amount you just spent is:
                 </div>
-                <span
-                  style={{
-                    fontSize: '18px',
-                    color: '#dff7e3',
-                    borderRadius: 20
-                  }}
-                >
-                  {medianHouseHolds}
-                </span>{' '}
-                times the income of the median US household ($68,000/year).
-                <br></br>
-                <span
-                  style={{
-                    fontSize: '18px',
-                    color: '#dff7e3',
-                    borderRadius: 20
-                  }}
-                >
-                  {medianLifeTimeEarnings}
-                </span>{' '}
-                times the median lifetime earnings of a US citizen ($1.7
-                million).
-                <br></br>
-                <span
-                  style={{
-                    fontSize: '18px',
-                    color: '#dff7e3',
-                    borderRadius: 20
-                  }}
-                >
-                  {MadagascarGDP}
-                </span>{' '}
-                times the annual GDP of Madagascar ($13.72 billion for a country
-                of 26 million people).
-                <br></br>
-                Total number of years the average US citizen needs to work to
-                generate same amount (at $49,764/year):{' '}
-                <span
-                  style={{
-                    fontSize: '18px',
-                    color: '#dff7e3',
-                    borderRadius: 20
-                  }}
-                >
-                  {annualSalaries}
-                </span>
-                <br></br>
-                Number of days needed for Elon Musk to generate the same amount
-                (at $32.4 million/day):{' '}
-                <span
-                  style={{
-                    fontSize: '18px',
-                    color: '#dff7e3',
-                    borderRadius: 20
-                  }}
-                >
-                  {elonMuskHours}
-                </span>
+                <div className='spendStats'>
+                  <span
+                    style={{
+                      fontSize: '18px',
+                      color: '#dff7e3',
+                      borderRadius: 20
+                    }}
+                  >
+                    {medianHouseHolds}
+                  </span>{' '}
+                  times the income of the median US household ($68,000/year).
+                  <br></br>
+                  <span
+                    style={{
+                      fontSize: '18px',
+                      color: '#dff7e3',
+                      borderRadius: 20
+                    }}
+                  >
+                    {medianLifeTimeEarnings}
+                  </span>{' '}
+                  times the median lifetime earnings of a US citizen ($1.7
+                  million).
+                  <br></br>
+                  <span
+                    style={{
+                      fontSize: '18px',
+                      color: '#dff7e3',
+                      borderRadius: 20
+                    }}
+                  >
+                    {MadagascarGDP}
+                  </span>{' '}
+                  times the annual GDP of Madagascar ($13.72 billion for a
+                  country of 26 million people).
+                  <br></br>
+                  Total number of years the average US citizen needs to work to
+                  generate same amount (at $49,764/year):{' '}
+                  <span
+                    style={{
+                      fontSize: '18px',
+                      color: '#dff7e3',
+                      borderRadius: 20
+                    }}
+                  >
+                    {annualSalaries}
+                  </span>
+                  <br></br>
+                  Number of days needed for Elon Musk to generate the same
+                  amount (at $32.4 million/day):{' '}
+                  <span
+                    style={{
+                      fontSize: '18px',
+                      color: '#dff7e3',
+                      borderRadius: 20
+                    }}
+                  >
+                    {elonMuskHours}
+                  </span>
+                </div>
               </div>
             </Text>
           </div>

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Wealth_Inequality/static/css/main.8574f72e.css",
+    "main.js": "/Wealth_Inequality/static/js/main.9f8a527a.js",
+    "static/js/787.27918251.chunk.js": "/Wealth_Inequality/static/js/787.27918251.chunk.js",
+    "index.html": "/Wealth_Inequality/index.html",
+    "main.8574f72e.css.map": "/Wealth_Inequality/static/css/main.8574f72e.css.map",
+    "main.9f8a527a.js.map": "/Wealth_Inequality/static/js/main.9f8a527a.js.map",
+    "787.27918251.chunk.js.map": "/Wealth_Inequality/static/js/787.27918251.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8574f72e.css",
+    "static/js/main.9f8a527a.js"
+  ]
+}

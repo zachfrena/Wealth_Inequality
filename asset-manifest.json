@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Wealth_Inequality/static/css/main.b37d23f7.css",
+    "main.css": "/Wealth_Inequality/static/css/main.58b14e37.css",
     "main.js": "/Wealth_Inequality/static/js/main.e27b5235.js",
     "static/js/787.27918251.chunk.js": "/Wealth_Inequality/static/js/787.27918251.chunk.js",
     "index.html": "/Wealth_Inequality/index.html",
-    "main.b37d23f7.css.map": "/Wealth_Inequality/static/css/main.b37d23f7.css.map",
+    "main.58b14e37.css.map": "/Wealth_Inequality/static/css/main.58b14e37.css.map",
     "main.e27b5235.js.map": "/Wealth_Inequality/static/js/main.e27b5235.js.map",
     "787.27918251.chunk.js.map": "/Wealth_Inequality/static/js/787.27918251.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b37d23f7.css",
+    "static/css/main.58b14e37.css",
     "static/js/main.e27b5235.js"
   ]
 }

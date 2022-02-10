@@ -53,7 +53,7 @@ function App () {
 
   var formattedTotal = formatter.format(total)
   var formattedTotalSpent = formatter.format(originalTotal - total)
-  var remainingPercentage = ((total / originalTotal) * 100).toFixed(3)
+  var remainingPercentage = ((originalTotal)?((total / originalTotal) * 100).toFixed(3):0)
 
   let nf = new Intl.NumberFormat('en-US')
   var medianHouseHolds = nf.format(((originalTotal - total) / 68000).toFixed(1))

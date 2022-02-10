@@ -12,7 +12,7 @@ function App () {
   const [originalTotal, setOriginalTotal] = useState(0)
   const url = 'https://forbes400.herokuapp.com/api/forbes400?limit=10'
   const [billionaires, setBillionaires] = useState(null)
-  const [image, setImage] = useState('images/mystery.JPG')
+  const [image, setImage] = useState('public/images/mystery.JPG')
   const [bio1, setBio1] = useState('')
   const [bio2, setBio2] = useState('')
   const [bio3, setBio3] = useState('')

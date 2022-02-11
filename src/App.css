@@ -16,7 +16,16 @@
 }
 
 .spentBox{
-  width: 50%;
+  width: 100%;
+}
+
+.chooseBillionaire{
+  width: 300px;
+  margin-left: 20%;
+}
+.billionaireSelect{
+  width: 40%; 
+  margin-left: 20px;
 }
 
 .spendStats{
@@ -42,7 +51,7 @@
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
 
   .comparisons{
     font-size: 17px;
@@ -51,5 +60,34 @@
   .spentBox{
     width: 100%;
   }
+  .chooseBillionaire{
+    width: 400px;
+    margin-left: 10%;
+  }
+  .billionaireSelect{
+    width: 45%; 
+    margin-left: 20px;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .comparisons{
+    font-size: 17px;
+
+  }
+  .spentBox{
+    width: 100%;
+  }
+  .chooseBillionaire{
+    width: 400px;
+    margin-left: 10%;
+  }
+  .billionaireSelect{
+    width: 100%; 
+    margin-left: 20px;
+  }
+
 }
 

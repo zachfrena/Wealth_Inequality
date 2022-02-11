@@ -4,7 +4,7 @@ import './App.css'
 import ItemData from './ItemData.json'
 import RichPeople from './Components/RichPeople'
 import { Text, Group, Grid } from '@mantine/core'
-import { Image, Select } from '@mantine/core'
+import { Image, Select, Button, Collapse } from '@mantine/core'
 import axios from 'axios'
 
 function App () {
@@ -16,6 +16,7 @@ function App () {
   const [bio1, setBio1] = useState('')
   const [bio2, setBio2] = useState('')
   const [bio3, setBio3] = useState('')
+  const [opened, setOpen] = useState(false)
   let titles = ItemData
 
   function updateWorth (event) {
@@ -26,6 +27,10 @@ function App () {
     setBio1(event.bio1)
     setBio2(event.bio2)
     setBio3(event.bio3)
+  }
+
+  let updateTotal = val => {
+    setTotal(total + val)
   }
 
   let incrementTotal = val => {
@@ -53,7 +58,9 @@ function App () {
 
   var formattedTotal = formatter.format(total)
   var formattedTotalSpent = formatter.format(originalTotal - total)
-  var remainingPercentage = ((originalTotal)?((total / originalTotal) * 100).toFixed(3):0)
+  var remainingPercentage = originalTotal
+    ? ((total / originalTotal) * 100).toFixed(3)
+    : 0
 
   let nf = new Intl.NumberFormat('en-US')
   var medianHouseHolds = nf.format(((originalTotal - total) / 68000).toFixed(1))
@@ -105,7 +112,7 @@ function App () {
               rowGap: '40px'
             }}
           >
-            <p style={{ fontSize: '24px', width: '75%', textAlign: 'start' }}>
+            <p style={{ fontSize: '24px', width: '85%', textAlign: 'start' }}>
               We've all heard the phrase{' '}
               <span style={{ fontStyle: 'italic' }}>"the rich get richer"</span>
               , but that's not the end of the story-- more and more wealth is
@@ -118,7 +125,7 @@ function App () {
               <span style={{ fontWeight: 'bolder', color: '#fcd73f' }}>
                 the poorest half (55%) of the global population (~4.5 billion
                 people) barely owns any wealth at all, possessing just 1.3% of
-                the total world's amount.
+                the world's total.
               </span>{' '}
               In contrast,{' '}
               <span style={{ fontWeight: 'bolder', color: '#fcd73f' }}>
@@ -204,10 +211,10 @@ function App () {
               marginBottom: '50px'
             }}
           >
-            <div style={{ width: 300, marginLeft: '300px' }}>
+            <div className='chooseBillionaire'>
               <Image radius='md' src={image} alt='Random unsplash image' />
             </div>
-            <div style={{ width: 600, marginLeft: '20px' }}>
+            <div className='billionaireSelect'>
               <Select
                 placeholder='Pick one'
                 data={menuData}
@@ -279,102 +286,138 @@ function App () {
             Total Balance: {formattedTotal}
           </Text>
           <div
-            className='spentBox'
             style={{
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
-              background: '#38a84b',
-              padding: '7px',
-              borderRadius: 8
+              alignItems: 'center'
             }}
           >
-            <Text
-              className='totalDollarsSpent'
-              weight={700}
+            <Button
               style={{
-                fontSize: '18px',
-                padding: '0px 10px 0px 10px',
                 background: '#dff7e3',
-                borderRadius: 20
+                color: 'black',
+                borderRadius: 20,
+                height: '50px'
               }}
+              onClick={() => setOpen(o => !o)}
             >
-              Total Dollars Spent: {formattedTotalSpent}
-            </Text>
-            <Text weight={500} style={{}}>
               <div>
-                <div
-                  className='comparisons'
+                <Text
+                  className='totalDollarsSpent'
+                  weight={700}
                   style={{
-                    fontWeight: 'bolder',
-                    padding: '0px 0px 5px 0px'
+                    fontSize: '18px',
+                    padding: '0px 10px 0px 10px',
+                    background: '#dff7e3',
+                    borderRadius: 20
                   }}
                 >
-                  Or in other words... the amount you just spent is:
-                </div>
-                <div className='spendStats'>
-                  <span
-                    style={{
-                      fontSize: '18px',
-                      color: '#dff7e3',
-                      borderRadius: 20
-                    }}
-                  >
-                    {medianHouseHolds}
-                  </span>{' '}
-                  times the income of the median US household ($68,000/year).
-                  <br></br>
-                  <span
-                    style={{
-                      fontSize: '18px',
-                      color: '#dff7e3',
-                      borderRadius: 20
-                    }}
-                  >
-                    {medianLifeTimeEarnings}
-                  </span>{' '}
-                  times the median lifetime earnings of a US citizen ($1.7
-                  million).
-                  <br></br>
-                  <span
-                    style={{
-                      fontSize: '18px',
-                      color: '#dff7e3',
-                      borderRadius: 20
-                    }}
-                  >
-                    {MadagascarGDP}
-                  </span>{' '}
-                  times the annual GDP of Madagascar ($13.72 billion for a
-                  country of 26 million people).
-                  <br></br>
-                  Total number of years the average US citizen needs to work to
-                  generate same amount (at $49,764/year):{' '}
-                  <span
-                    style={{
-                      fontSize: '18px',
-                      color: '#dff7e3',
-                      borderRadius: 20
-                    }}
-                  >
-                    {annualSalaries}
-                  </span>
-                  <br></br>
-                  Number of days needed for Elon Musk to generate the same
-                  amount (at $32.4 million/day):{' '}
-                  <span
-                    style={{
-                      fontSize: '18px',
-                      color: '#dff7e3',
-                      borderRadius: 20
-                    }}
-                  >
-                    {elonMuskHours}
-                  </span>
-                </div>
+                  Total Dollars Spent: {formattedTotalSpent}
+                </Text>
+                <Text
+                  className='totalDollarsSpent'
+                  weight={700}
+                  style={{
+                    fontSize: '12px',
+                    background: '#dff7e3',
+                    borderRadius: 20
+                  }}
+                >
+                  Click here for more details
+                </Text>
               </div>
-            </Text>
+            </Button>
+
+            <Collapse in={opened}>
+              <div
+                className='spentBox'
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  background: '#38a84b',
+                  padding: '7px',
+                  borderRadius: 8
+                }}
+              >
+                <Text weight={500} style={{}}>
+                  <div>
+                    <div
+                      className='comparisons'
+                      style={{
+                        fontWeight: 'bolder',
+                        padding: '0px 0px 5px 0px'
+                      }}
+                    >
+                      Or in other words... the amount you just spent is:
+                    </div>
+                    <div className='spendStats'>
+                      <span
+                        style={{
+                          fontSize: '18px',
+                          color: '#dff7e3',
+                          borderRadius: 20
+                        }}
+                      >
+                        {medianHouseHolds}
+                      </span>{' '}
+                      times the income of the median US household
+                      ($68,000/year).
+                      <br></br>
+                      <span
+                        style={{
+                          fontSize: '18px',
+                          color: '#dff7e3',
+                          borderRadius: 20
+                        }}
+                      >
+                        {medianLifeTimeEarnings}
+                      </span>{' '}
+                      times the median lifetime earnings of a US citizen ($1.7
+                      million).
+                      <br></br>
+                      <span
+                        style={{
+                          fontSize: '18px',
+                          color: '#dff7e3',
+                          borderRadius: 20
+                        }}
+                      >
+                        {MadagascarGDP}
+                      </span>{' '}
+                      times the annual GDP of Madagascar ($13.72 billion for a
+                      country of 26 million people).
+                      <br></br>
+                      Total number of years the average US citizen needs to work
+                      to generate same amount (at $49,764/year):{' '}
+                      <span
+                        style={{
+                          fontSize: '18px',
+                          color: '#dff7e3',
+                          borderRadius: 20
+                        }}
+                      >
+                        {annualSalaries}
+                      </span>
+                      <br></br>
+                      Number of days needed for Elon Musk to generate the same
+                      amount (at $32.4 million/day):{' '}
+                      <span
+                        style={{
+                          fontSize: '18px',
+                          color: '#dff7e3',
+                          borderRadius: 20
+                        }}
+                      >
+                        {elonMuskHours}
+                      </span>
+                    </div>
+                  </div>
+                </Text>
+              </div>
+            </Collapse>
           </div>
+
           <Text
             weight={700}
             style={{
@@ -399,6 +442,7 @@ function App () {
                 img_url={data.img_url}
                 decrement={decrementTotal}
                 increment={incrementTotal}
+                update={updateTotal}
               />
             </Grid.Col>
           ))}

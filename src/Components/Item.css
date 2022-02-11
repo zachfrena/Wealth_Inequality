@@ -2,6 +2,13 @@
     text-align: center;
 }
 
+.updateButton{
+    width:59px;
+    font-size:'10px';
+    margin-right: 0;
+    margin-left: 5px;
+}
+
 @media (max-width: 1600px) {
     .card{
         width: 370px;

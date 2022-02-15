@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import toast, { Toaster } from 'react-hot-toast'
 // import Button from './Button'
 import './Item.css'
 import {
@@ -19,6 +20,11 @@ function Item (props) {
   const [count, setCount] = useState(0)
   const [oldCount, setOldCount] = useState(0)
   const [lock, setLock] = useState(false)
+
+  const errorNotify = () => {
+    toast.error('The maximum quantity for this item is: '+ props.maximum);
+    console.log('inside errorNotify')
+  }
 
   let incrementCount = () => {
     setCount(count + 1)
@@ -50,6 +56,9 @@ function Item (props) {
         props.decrement(val)
         incrementCount()
       }
+      else{
+        errorNotify();
+      }
       setOldCount(count)
     }
   }
@@ -60,6 +69,9 @@ function Item (props) {
         setOldCount(count)
       }
       setCount(val)
+    }
+    else{
+      errorNotify();
     }
     setLock(true)
   }
@@ -103,6 +115,7 @@ function Item (props) {
 
   return (
     <div className='card' style={{ margin: 'auto' }}>
+      <Toaster position="bottom-left"/>
       <Card shadow='sm' padding='lg' style={{ background: '#faf5f5' }}>
         <Card.Section>
           <Image src={props.img_url} height={160} alt='Norway' />

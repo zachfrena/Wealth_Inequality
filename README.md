@@ -13,6 +13,7 @@ As seen below, you first must choose your billionaire of interest. More informat
 
 ### Step 2: Purchase your items:
 Navigate downward to the item categories and choose which items you want to purchase. Use the "buy" and "sell" buttons on each item card to purchase each item. Additionally, you may type in the value of the items you want to purchase. The green bar will stick to the top of the screen as you navigate throughout the site, and will automatically update as you make purchases. 
+
 <img src="https://github.com/zachfrena/Wealth_Inequality/blob/master/Media/buyingItems.gif" width="600"/>
 
 

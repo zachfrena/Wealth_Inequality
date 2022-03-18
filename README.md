@@ -26,11 +26,10 @@ Inspiration for this website came from [Wealth, Shown To Scale](https://mkorosto
 
 ### How to view online:
 
-To view this project in the online development environment, you can visit: https://zachfrena.github.io/Wealth_Inequality/
+To view this project in the deployment environment (in browser), you can visit: https://zachfrena.github.io/Wealth_Inequality/
 
 ### How to view on local device:
 
-After cloning this repository to your local device, you can run `npm start` in the project directory
+After cloning this repository to your local device, navigate into the project directory and run the command `npm install` to install necessary dependencies. Finally, can run `npm start` in the same project directory. This should automatically open your localhost server in your browswer. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If it doesn't automatically open, open a new browswer window and navigate to [http://localhost:3000](http://localhost:3000).

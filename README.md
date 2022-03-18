@@ -30,6 +30,6 @@ To view this project in the deployment environment (in browser), you can visit: 
 
 ### How to view on local device:
 
-After cloning this repository to your local device, navigate into the project directory and run the command `npm install` to install necessary dependencies. Finally, can run `npm start` in the same project directory. This should automatically open your localhost server in your browswer. 
+After cloning this repository to your local device, navigate into the project directory and run the command `npm install` to install necessary dependencies. Finally, run `npm start` in the same project directory. This should automatically open your localhost server in your browswer. 
 
 If it doesn't automatically open, open a new browswer window and navigate to [http://localhost:3000](http://localhost:3000).
